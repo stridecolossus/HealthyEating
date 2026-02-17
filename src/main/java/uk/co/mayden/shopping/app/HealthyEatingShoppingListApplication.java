@@ -1,4 +1,4 @@
-package uk.co.mayden.shopping;
+package uk.co.mayden.shopping.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
