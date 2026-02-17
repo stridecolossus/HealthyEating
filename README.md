@@ -50,3 +50,5 @@ For the purposes of illustration, I have excluded two stories from those committ
 * #6 Reordering a shopping list - This seemed to me to imply some sort of drag-and-drop mechanism using JavaScript or CSS transform / animations.  As I have intentionally skirted around presentation this story would be difficult to deliver (or at least would be bad from a usability perspective).
 
 Story #8 "Put a spending limit in place..." appears to be a cut-and-paste duplicate (?) of the previous story, something I only noticed late in the day.  Obviously in a real-world scenario this requirement issue would be taken up with the product owner.  Intentional or not, for the purposes of this exercise I assumed that the spending limit is applied when the shopper is building a shopping list.
+
+Finally, if the team are interested, I have several other repositories for various personal projects they are welcome to browse, in particular:  [Hardware accelerated 3D toolkit](https://github.com/stridecolossus/JOVE).  This project also has an (in progress) [blog](https://stridecolossus.github.io/jove-blog/) documenting design decisions, approaches taken, issues faced, etc.
