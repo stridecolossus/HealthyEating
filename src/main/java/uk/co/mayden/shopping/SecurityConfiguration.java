@@ -1,4 +1,4 @@
-package uk.co.mayden.shopping.app;
+package uk.co.mayden.shopping;
 
 import org.springframework.context.annotation.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,4 +1,4 @@
-package uk.co.mayden.shopping.app;
+package uk.co.mayden.shopping;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;

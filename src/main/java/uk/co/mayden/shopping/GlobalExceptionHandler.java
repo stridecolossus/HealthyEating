@@ -1,4 +1,4 @@
-package uk.co.mayden.shopping.app;
+package uk.co.mayden.shopping;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
