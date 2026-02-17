@@ -35,7 +35,7 @@ class SecurityConfiguration {
 	@Bean
 	UserDetailsService userDetailsService(PasswordEncoder encoder) {
 		// TODO - mocked / hard-coded account
-		final String password = encoder.encode("{noop}password");
+		final String password = encoder.encode("password");
 		final UserDetails user = User
 				.withUsername("shopper")
 				.password(password)
