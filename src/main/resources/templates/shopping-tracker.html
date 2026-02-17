@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Shopping Tracker</title>
+    </head>
+    
+    <body>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout"/>
+        </form>
+        
+        <div>
+            Shopper: <span th:text="${shopper}"></span>
+        </div>
+
+        <h1>Shopping List</h1>
+        <ul>
+            <li th:each="product: ${products}">
+                <a th:text="${product.name}" th:href="@{tracker/{id}/purchase(id=${product.id})}"></a>
+            </li>
+        </ul>
+
+        <h1>Purchases</h1>
+        <ul>
+            <li th:each="product: ${purchased}">
+                <p th:text="${product.name}"></p>
+            </li>
+        </ul>
+
+        <div>
+            <a href="list">Back to shopping list...</a>
+        </div>
+    </body>
+</html>

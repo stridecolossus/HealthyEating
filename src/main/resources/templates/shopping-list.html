@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Shopping List</title>
+    </head>
+    <body>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout"/>
+        </form>
+        
+        <div>
+            Shopper: <span th:text="${username}"></span>
+        </div>
+
+        <h1>Shopping List</h1>
+
+        <div>
+	        <table>
+	            <thead>
+	                <tr>
+	                    <th>Item</th>
+	                    <th>Price</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+                    <tr th:each="product : ${shopping.products}">
+                        <td><a th:text="${product.name}" th:href="@{list/{id}/remove(id=${product.id})}"></a></td>
+                        <td th:text="${product.price}"></td>
+                    </tr>
+	            </tbody>
+	        </table>        
+        </div>
+ 
+        <div>Total: <span th:text="${total}"></span></div>
+        
+        <div th:if="${warn}">
+            Warning: Spending limit exceeded
+        </div>
+        
+        <div th:if="${param.error}">
+            Spending limit must be zero or more.
+        </div>
+
+        <form th:action="@{/spending-limit}" method="post">
+            <div>
+                <label for="spendingLimit">Spending limit: </label>
+                <input type="text" name="spendingLimit" th:value="${spendingLimit > 0} ? ${spendingLimit} : 'None'" />
+                <input type="submit" value="Update" />
+            </div>
+        </form>                
+        
+        <div>
+            <ul th:each="product : ${available}">
+                <li>
+                    <a th:text="${product.name}" th:href="@{list/{id}/add(id=${product.id})}"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="tracker">Go shopping...</a>
+        </div>
+    </body>
+</html>
